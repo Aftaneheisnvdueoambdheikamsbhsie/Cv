@@ -11,6 +11,8 @@ body {
 .container {
     display: flex;
     min-height: 100vh;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Bagian Kiri */
@@ -22,6 +24,7 @@ body {
     flex-direction: column;
     align-items: center;
     padding: 20px;
+    border-right: 2px solid #1abc9c; /* Garis pembatas sebelah kiri */
 }
 
 .photo-section img {
@@ -56,13 +59,30 @@ body {
 .right {
     width: 65%;
     padding: 30px;
-    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.section {
+    padding: 15px;
+    border: 2px solid #1abc9c; /* Garis di sekitar setiap bagian */
+    border-radius: 8px;
+    background-color: #f9f9f9; /* Warna latar belakang lembut */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Bayangan untuk kesan 3D */
 }
 
 .section h2 {
     font-size: 20px;
     color: #2c3e50;
     margin-bottom: 10px;
+    border-bottom: 1px solid #1abc9c; /* Garis bawah untuk judul */
+    padding-bottom: 5px;
+}
+
+.section ul {
+    list-style-type: disc;
+    padding-left: 20px;
 }
 
 /* Logika untuk print */
@@ -89,5 +109,21 @@ body {
 
     .photo-section img {
         margin-bottom: 10px;
+    }
+
+    .section {
+        border: 1px solid black; /* Simpan garis pembatas saat print */
+        background-color: white;
+        box-shadow: none;
+    }
+}
+
+@media print {
+    .container {
+        margin-bottom: 0;
+    }
+    body {
+        margin: 0;
+        padding: 0;
     }
 }
