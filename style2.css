@@ -73,11 +73,18 @@ body {
     }
 
     .container {
-        display: block;
+        display: flex;
+        flex-direction: row; /* Pastikan tetap kanan-kiri saat print */
     }
 
-    .left, .right {
-        width: 100%;
+    .left {
+        width: 35%;
+        background-color: white;
+        color: black;
+    }
+
+    .right {
+        width: 65%;
     }
 
     .photo-section img {
